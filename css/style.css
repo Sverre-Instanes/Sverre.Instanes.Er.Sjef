@@ -79,6 +79,14 @@ header {
     color: #FFFFFF;
 }
 
+.link_kontakt a{
+    color: #252525;
+    text-decoration: none;
+}
+.link_kontakt a:hover {
+    color: #666666;
+}
+
 /* =========================
    OVERSKRIFTER
 ========================= */
