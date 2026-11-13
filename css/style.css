@@ -1,0 +1,348 @@
+
+/* =========================
+   GENERELT
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #FDFEFD;
+    color: #252525;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #3D4C41;
+
+    padding: 15px 4%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: bold;
+    color: #FDFEFD;
+    white-space: nowrap;
+}
+
+/* =========================
+   NAVIGASJON
+========================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+    gap: clamp(10px, 2vw, 25px);
+}
+
+.nav-links a {
+    color: #C5C0B3;
+    text-decoration: none;
+
+    font-size: clamp(12px, 1.5vw, 16px);
+    font-weight: 500;
+
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF;
+}
+
+/* =========================
+   OVERSKRIFTER
+========================= */
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.1;
+
+}
+
+/* =========================
+   TEKST
+========================= */
+
+p {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    margin: 0 15px 1rem;
+    line-height: 1.4;
+}
+
+a {
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   HOVEDINNHOLD
+========================= */
+
+.text_holder {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* =========================
+   BILDER
+========================= */
+
+
+
+.text_holder img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+
+    clip-path: ellipse(40% 40%);
+    filter: brightness(0.9);
+}
+
+/* Telefonbildet */
+.telefon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 15px;
+}
+
+.telefon img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+    clip-path: none;
+    filter: none;
+    object-fit: contain;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 2rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #3D4C41;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C5C0B3;
+    border-radius: 1415865286825827852789572895px;
+    
+}
+
+/* =========================
+   KONTAKT
+========================= */
+
+body > a {
+    display: inline-block;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: #3D4C41;
+    margin: 10px;
+}
+
+body > a:hover {
+    color: #788C7B;
+}
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.nederst_disclaimer {
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: 30px;
+
+    font-size: clamp(11px, 1.5vw, 13px);
+    color: #666666;
+}
+
+.nederst_disclaimer p {
+    font-size: inherit;
+    margin: 0;
+}
+
+/* =========================
+   NETTBRETT
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+    h1 {
+        font-size: 8vw;
+    }
+
+    ::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    body {
+        padding-top: 60px;
+    }
+}
+
+/* =========================
+   MOBIL
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding-top: 100px;
+    }
+    h1 {
+        font-size: 8vw;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        padding: 10px 5px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: clamp(8px, 3vw, 15px);
+    }
+
+    .nav-links a {
+        font-size: clamp(11px, 3.2vw, 13px);
+    }
+
+
+    .text_holder {
+        padding: 0 10px;
+    }
+
+    .telefon img {
+        max-width: 100%;
+    }
+
+    ::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+}
+
+
+
+/* Profilbilde */
+.ommegbilde {
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 0px;
+    clip-path: none;
+}
+
+
+/* Kort-container */
+.kort_container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Individuelle kort */
+.info_kort {
+    background-color: #E8EDE7;
+    border-radius: 18px;
+    min-height: 120px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.info_kort h2 {
+    font-size: clamp(18px, 2vw, 23px);
+    margin-bottom: 8px;
+}
+
+.info_kort p {
+    font-size: clamp(13px, 1.5vw, 16px);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.interesse_bilder {
+    max-width: 600px;
+    width: 100%;
+    padding: 15px;
+}
+.interesse_bilder_holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
